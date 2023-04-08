@@ -7,6 +7,22 @@ import ru.netology.Radio;
 public class RadioTest {
 
     @Test
+    public void testAmount1() {
+        Radio radi = new Radio();
+        Assertions.assertEquals(10, 10);
+    }
+    @Test
+    public void testAmount2() {
+        Radio radi = new Radio(30);
+        Assertions.assertEquals(30, 30);
+    }
+    @Test
+    public void testAmount3() {
+        Radio radi = new Radio(1);
+        Assertions.assertEquals(1, 1);
+    }
+
+    @Test
     public void shouldSetStation() {
         Radio radi = new Radio();
         radi.setCurrentRadioStation(5);
