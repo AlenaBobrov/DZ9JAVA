@@ -25,6 +25,73 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldSetStation2() {
+        Radio radi = new Radio(20);
+        radi.setCurrentRadioStation(15);
+        int expected = 15;
+        int actual = radi.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSetStation3() {
+        Radio radi = new Radio(20);
+        radi.setCurrentRadioStation(19);
+        int expected = 19;
+        int actual = radi.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSetStation4() {
+        Radio radi = new Radio(20);
+        radi.setCurrentRadioStation(20);
+        int expected = 0;
+        int actual = radi.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSetStation5() {
+        Radio radi = new Radio(20);
+        radi.setCurrentRadioStation(0);
+        int expected = 0;
+        int actual = radi.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSetStation6() {
+        Radio radi = new Radio(20);
+        radi.setCurrentRadioStation(-2);
+        int expected = 0;
+        int actual = radi.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSwitchToNextStation2() {
+        Radio radi = new Radio(20);
+        radi.setCurrentRadioStation(15);
+        radi.next();
+        int expected = 16;
+        int actual = radi.getCurrentRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSwitchToPrevStation2() {
+        Radio radi = new Radio(20);
+        radi.setCurrentRadioStation(15);
+        radi.prev();
+        int expected = 14;
+        int actual = radi.getCurrentRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldSetStation() {
         Radio radi = new Radio();
         radi.setCurrentRadioStation(5);
